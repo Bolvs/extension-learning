@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@google/generative-ai": "^0.17.1"
+  },
+  "name": "extension-learning",
+  "version": "1.0.0",
+  "main": "background.js",
+  "devDependencies": {
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

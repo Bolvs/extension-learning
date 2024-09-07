@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Complexity Analyzer</title>
+    <style>
+        /* Add any necessary styles here */
+    </style>
+</head>
+
+<script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+<body>
+    <textarea id="codeInput" placeholder="Paste your code here"></textarea>
+    <button id="analyzeButton">Compute</button>
+    <div id="resultDiv"></div>
+
+    <!-- Import the necessary JavaScript files -->
+    <!-- <script type="module" src="popup.js"></script> -->
+    
+
+  <!-- ... Your HTML and CSS -->
+  <!-- Import @google/generative-ai, as shown above. -->
+  <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      // Fetch your API_KEY
+      const API_KEY = "AIzaSyC3M6Mlxxwz-kLzNn4ebEP4YDGZ1nwKuPk";
+      // Make sure to include these imports:
+// import { GoogleGenerativeAI } from "@google/generative-ai";
+const genAI = new GoogleGenerativeAI(API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+const prompt = "Write a story about a magic backpack.";
+
+const result = await model.generateContent(prompt);
+console.log(result.response.text());
+  </script>
+
+
+
+</body>
+
+  </html>
